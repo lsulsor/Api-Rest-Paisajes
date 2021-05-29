@@ -1,0 +1,16 @@
+
+
+<div class="col-md-4" *ngFor="let paisaje of paisajes">
+  <div class="card text-center">
+    <div class="card-header bg-dark text-white d-flex justify-content-between align-items-center">
+      {{paisaje.lugar}}
+      <button class="btn btn-danger" (click)="deletePaisaje(paisaje.lugar)">Eliminar</button>
+    </div>
+    
+    <img [src]=paisaje.imagen class="card-img-top">
+  </div>
+  <!-- <div class="card-body">
+      <p>{{paisaje.descripcion}}</p>
+      <a [routerLink]= "['/paisajes/edit', paisaje.ID]" class="btn btn-info btn-block" >Editar Paisaje</a>
+  </div> -->
+</div>
